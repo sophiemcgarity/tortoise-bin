@@ -27,7 +27,7 @@ app.get('/', (request, response) => {
 // Creation of new bin
 app.post('/createBin', (request, response) => {
   // Generate a 8 digit string made up from letters and numbers
-  const newBin = 'A1B2C3D4';
+  const newBin = 'A1B2C3D4'; //generateRandomURL() method or something like that
   
   const origin_ip = '198.24.10.0/24';                // get this from request info
   const creation_time = '2020-01-01 00:00:00.001';   // get this from request info or generate ourselves?
@@ -47,7 +47,7 @@ app.post('/createBin', (request, response) => {
   })
 
   // Redirect to inspect page? Maybe simply display the URL generated like requestbin does
-  response.redirect('/A1B2C3D4')
+  response.redirect('/A1B2C3D4?inspect')
 })
 
 // This is the endpoint for the webhook
