@@ -17,10 +17,10 @@ CREATE TABLE bins (
 
 CREATE TABLE requests (
   request_id serial PRIMARY KEY,
-  request_type char(8),
+  request_type varchar(8),
   request_origin_ip cidr,
   time_received timestamp,
-  headers varchar,
+  headers jsonb,
   request_payload jsonb
 );
 
